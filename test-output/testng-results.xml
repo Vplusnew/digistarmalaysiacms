@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-06T18:05:10 WIB" name="Default suite" finished-at="2023-11-06T18:05:51 WIB" duration-ms="40601">
+    <groups>
+    </groups>
+    <test started-at="2023-11-06T18:05:10 WIB" name="Default test" finished-at="2023-11-06T18:05:51 WIB" duration-ms="40601">
+      <class name="selenium.AutomationDigistar.b_Content_Menu">
+        <test-method signature="aMenambahkanClusterHomepageBaru()[pri:0, instance:selenium.AutomationDigistar.b_Content_Menu@1bd39d3c]" started-at="2023-11-06T18:05:10 WIB" name="aMenambahkanClusterHomepageBaru" finished-at="2023-11-06T18:05:51 WIB" duration-ms="40355" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aMenambahkanClusterHomepageBaru -->
+      </class> <!-- selenium.AutomationDigistar.b_Content_Menu -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
