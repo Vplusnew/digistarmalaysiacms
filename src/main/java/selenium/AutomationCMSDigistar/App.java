@@ -1,4 +1,4 @@
-package selenium.AutomationDigistar;
+package selenium.AutomationCMSDigistar;
 
 /**
  * Hello world!

@@ -1,4 +1,4 @@
-package selenium.AutomationDigistar;
+package selenium.AutomationCMSDigistar;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import java.time.Duration;
@@ -32,6 +32,7 @@ public void aMenambahkanClusterHomepageBaru() throws InterruptedException {
 		driver.findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys("4321lupa");
 		driver.findElement(By.xpath("(//button[normalize-space()='Log in'])[1]")).click();
 //MembuatClusterBaru 
+		
 		
 		driver.findElement(By.xpath("(//input[@value='homepage'])[1]")).click();
 		driver.findElement(By.xpath("(//button[normalize-space()='Cluster'])[1]")).click();
@@ -74,15 +75,24 @@ public void bEditClusterHomepage() throws InterruptedException {
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 			Thread.sleep(1000);
 			driver.findElement(By.xpath("(//input[@id='email'])[1] ")).sendKeys("test@mail.com");
+			Thread.sleep(500);
 			driver.findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys("4321lupa");
+			Thread.sleep(500);
+			
 			driver.findElement(By.xpath("(//button[normalize-space()='Log in'])[1]")).click();
 	//EditCluster;
+			Thread.sleep(500);
+			
 			driver.findElement(By.xpath("(//button)[6]")).click();		
 			//driver.findElement(By.xpath("//body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[3]/div[4]/div[1]/div[1]/div[1]/button[1]")).click();
-		
+			Thread.sleep(500);
+			
 			driver.findElement(By.xpath("(//input[@placeholder='Sort'])[1]")).clear();
+			Thread.sleep(500);
 			driver.findElement(By.xpath("(//input[@placeholder='Sort'])[1]")).sendKeys("2");
+			Thread.sleep(500);
 			driver.findElement(By.xpath("(//input[@placeholder='Content ID'])[1]")).sendKeys("58226");
+			Thread.sleep(500);
 			driver.findElement(By.xpath("(//button[normalize-space()='Add Content'])[1]")).click();
 			driver.findElement(By.xpath("(//button[normalize-space()='save'])[1]")).click();
 				Thread.sleep(20000);
@@ -90,7 +100,8 @@ public void bEditClusterHomepage() throws InterruptedException {
 			driver.quit();
 			
 			
-
+//NEWREPOSITORY
+			//tanbahanrepository
 	}
 }
 
