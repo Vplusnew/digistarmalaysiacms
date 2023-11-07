@@ -37,14 +37,14 @@ public void aMenambahkanClusterHomepageBaru() throws InterruptedException {
 		driver.findElement(By.xpath("(//input[@value='homepage'])[1]")).click();
 		driver.findElement(By.xpath("(//button[normalize-space()='Cluster'])[1]")).click();
 //InputAllfield
-		driver.findElement(By.xpath("(//input[@placeholder='Title (ID)'])[1]")).sendKeys("Cluster Automation 2");
+		driver.findElement(By.xpath("(//input[@placeholder='Title (ID)'])[1]")).sendKeys("Cluster Automation 3");
 
-		driver.findElement(By.xpath("(//input[@placeholder='Title (EN)'])[1]")).sendKeys("Automation Cluster 2");
+		driver.findElement(By.xpath("(//input[@placeholder='Title (EN)'])[1]")).sendKeys("Automation Cluster 3");
 		driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/main/div/div[5]/div/div[2]/div[1]/div[2]/form/div[1]/div[4]/textarea")).sendKeys("Tes Bahasa Indonesia");
 		driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/main/div/div[5]/div/div[2]/div[1]/div[2]/form/div[1]/div[5]/textarea")).sendKeys("Tes Bahasa Inggris");
 		
 		driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/main/div/div[5]/div/div[2]/div[1]/div[2]/form/div[1]/div[6]/input")).sendKeys("Homepage");
-		driver.findElement(By.xpath("(//input[@placeholder='Sort'])[1]")).sendKeys("4");
+		driver.findElement(By.xpath("(//input[@placeholder='Sort'])[1]")).sendKeys("15");
 		driver.findElement(By.xpath("(//input[@value='1'])[1]")).click();
 		driver.findElement(By.xpath("(//input[@placeholder='Content ID'])[1]")).sendKeys("66612");
 		driver.findElement(By.xpath("(//button[normalize-space()='Add Content'])[1]")).click();
@@ -83,15 +83,58 @@ public void bEditClusterHomepage() throws InterruptedException {
 	//EditCluster;
 			Thread.sleep(500);
 			
-			driver.findElement(By.xpath("(//button)[6]")).click();		
+			driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/main/div/div[3]/div[1]/div/div[1]/div/button")).click()	;
 			//driver.findElement(By.xpath("//body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[3]/div[4]/div[1]/div[1]/div[1]/button[1]")).click();
 			Thread.sleep(500);
 			
 			driver.findElement(By.xpath("(//input[@placeholder='Sort'])[1]")).clear();
 			Thread.sleep(500);
-			driver.findElement(By.xpath("(//input[@placeholder='Sort'])[1]")).sendKeys("2");
+			driver.findElement(By.xpath("(//input[@placeholder='Sort'])[1]")).sendKeys("1");
 			Thread.sleep(500);
-			driver.findElement(By.xpath("(//input[@placeholder='Content ID'])[1]")).sendKeys("58226");
+			driver.findElement(By.xpath("(//input[@value='1'])[1]")).click();
+			Thread.sleep(500);
+			driver.findElement(By.xpath("(//input[@placeholder='Content ID'])[1]")).sendKeys("407");
+			Thread.sleep(500);
+			driver.findElement(By.xpath("(//button[normalize-space()='Add Content'])[1]")).click();
+			driver.findElement(By.xpath("(//button[normalize-space()='save'])[1]")).click();
+				Thread.sleep(20000);
+			driver.close();
+			driver.quit();
+
+	}
+
+  @Test
+public void cMenambahkanClusterMovies() throws InterruptedException {
+	//Login
+			WebDriver driver;
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+			driver.get("https://cms-stag-digistar.visionplus.id/login");
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("(//input[@id='email'])[1] ")).sendKeys("test@mail.com");
+			Thread.sleep(500);
+			driver.findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys("4321lupa");
+			Thread.sleep(500);
+			
+			driver.findElement(By.xpath("(//button[normalize-space()='Log in'])[1]")).click();
+	//EditCluster;
+			driver.findElement(By.xpath("(//input[@value='movies'])[1]")).click();
+			Thread.sleep(500);
+			
+			driver.findElement(By.xpath("(//button[normalize-space()='Cluster'])[1]")).click();
+			//driver.findElement(By.xpath("//body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[3]/div[4]/div[1]/div[1]/div[1]/button[1]")).click();
+			Thread.sleep(500);
+			
+			driver.findElement(By.xpath("(//input[@placeholder='Title (ID)'])[1]")).sendKeys("Kluster Otomatis 1");
+			Thread.sleep(500);
+			driver.findElement(By.xpath("(//input[@placeholder='Title (EN)'])[1]")).sendKeys("Automation Cluster 1");
+			driver.findElement(By.xpath("(//input[@placeholder='Sorting'])[1]")).sendKeys("10");
+			Thread.sleep(500);
+			driver.findElement(By.xpath("(//input[@value='1'])[1]")).click();
+			driver.findElement(By.xpath("(//input[@placeholder='Content ID'])[1]")).sendKeys("254");
 			Thread.sleep(500);
 			driver.findElement(By.xpath("(//button[normalize-space()='Add Content'])[1]")).click();
 			driver.findElement(By.xpath("(//button[normalize-space()='save'])[1]")).click();
@@ -99,9 +142,46 @@ public void bEditClusterHomepage() throws InterruptedException {
 			driver.close();
 			driver.quit();
 			
+}
+  
+
+  @Test
+public void dEditCLusterMovies() throws InterruptedException {
+	//Login
+			WebDriver driver;
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
 			
-//NEWREPOSITORY
-			//tanbahanrepository
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+			driver.get("https://cms-stag-digistar.visionplus.id/login");
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("(//input[@id='email'])[1] ")).sendKeys("test@mail.com");
+			Thread.sleep(500);
+			driver.findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys("4321lupa");
+			Thread.sleep(500);
+			
+			driver.findElement(By.xpath("(//button[normalize-space()='Log in'])[1]")).click();
+	//EditCluster;
+			Thread.sleep(500);
+			driver.findElement(By.xpath("(//input[@value='movies'])[1]")).click();
+			Thread.sleep(500);
+			
+//			driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/main/div/div[3]/div[2]/div/div[1]/div/button")).click();
+			driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/main/div/div[3]/div[11]/div/div[1]/div/button")).click();
+;			driver.findElement(By.xpath("(//input[@placeholder='Title (ID)'])[1]")).clear();
+			driver.findElement(By.xpath("(//input[@placeholder='Title (ID)'])[1]")).sendKeys("Drama Film Indonesia");
+			Thread.sleep(500);
+			driver.findElement(By.xpath("(//input[@placeholder='Title (EN)'])[1]")).clear();
+			driver.findElement(By.xpath("(//input[@placeholder='Title (EN)'])[1]")).sendKeys("Indonesia Movie Drama");
+			driver.findElement(By.xpath("(//input[@placeholder='Sorting'])[1]")).clear();
+			driver.findElement(By.xpath("(//input[@placeholder='Sorting'])[1]")).sendKeys("2");
+			Thread.sleep(500);
+			driver.findElement(By.xpath("(//button[normalize-space()='save'])[1]")).click();
+				Thread.sleep(20000);
+			driver.close();
+			driver.quit();
+
 	}
 }
 
