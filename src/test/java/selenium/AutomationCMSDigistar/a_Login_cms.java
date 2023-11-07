@@ -34,7 +34,7 @@ import org.openqa.selenium.support.ui.Wait;
 public class a_Login_cms{
 
 	@Test
-public void Login_valid() throws InterruptedException { //TC1 Login No telephone Valid
+public void TC1_Login_valid() throws InterruptedException { //TC1 Login No telephone Valid
 			WebDriver driver;
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -53,7 +53,7 @@ public void Login_valid() throws InterruptedException { //TC1 Login No telephone
 		}
 	
   @Test
-public void LoginEmailTidfakterdaftar() throws InterruptedException { //TC2 login PasswordSalah
+public void TC2_LoginEmailTidakterdaftar() throws InterruptedException { //TC2 login PasswordSalah
 		WebDriver driver;
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -73,7 +73,7 @@ public void LoginEmailTidfakterdaftar() throws InterruptedException { //TC2 logi
 
 
 @Test
-public void LoginPasswordSalah() throws InterruptedException { //TC3 Login NoTLPSalah
+public void TC3_LoginEmailsalahPasswordSalah() throws InterruptedException { //TC3 Login NoTLPSalah
 	WebDriver driver;
 	WebDriverManager.chromedriver().setup();
 	driver = new ChromeDriver();
@@ -83,7 +83,7 @@ public void LoginPasswordSalah() throws InterruptedException { //TC3 Login NoTLP
 	//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //	Thread.sleep(20000);
 	driver.findElement(By.xpath("(//input[@id='email'])[1] ")).sendKeys("test@mail.com");
-	driver.findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys("4321lupaaaaaaaaa");
+	driver.findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys("4321luaaaaaaaa");
 	driver.findElement(By.xpath("(//button[normalize-space()='Log in'])[1]")).click();
 	Thread.sleep(10000);
 	driver.close();
@@ -92,7 +92,25 @@ public void LoginPasswordSalah() throws InterruptedException { //TC3 Login NoTLP
 	}
 
 @Test
-public void LoginTidakInputEmaildanpassword() throws InterruptedException { //TC4
+public void TC4_LoginEmailbenarPasswordSalah() throws InterruptedException { //TC3 Login NoTLPSalah
+	WebDriver driver;
+	WebDriverManager.chromedriver().setup();
+	driver = new ChromeDriver();
+	
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+	driver.get("https://cms-stag-digistar.visionplus.id/login");
+	//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//	Thread.sleep(20000);
+	driver.findElement(By.xpath("(//input[@id='email'])[1] ")).sendKeys("test@maila.com");
+	driver.findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys("4321lupaaaaaaaaa");
+	driver.findElement(By.xpath("(//button[normalize-space()='Log in'])[1]")).click();
+	Thread.sleep(10000);
+	driver.close();
+	driver.quit();
+		
+	}
+@Test
+public void TC5_LoginTidakInputEmaildanpassword() throws InterruptedException { //TC4
 	WebDriver driver;
 	WebDriverManager.chromedriver().setup();
 	driver = new ChromeDriver();

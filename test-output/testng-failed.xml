@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium.AutomationDigistar.b_Content_Menu">
+      <class name="selenium.AutomationCMSDigistar.b_Content_Menu">
         <methods>
-          <include name="aMenambahkanClusterHomepageBaru"/>
+          <include name="TC17_EditClusterMovies"/>
         </methods>
-      </class> <!-- selenium.AutomationDigistar.b_Content_Menu -->
+      </class> <!-- selenium.AutomationCMSDigistar.b_Content_Menu -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
