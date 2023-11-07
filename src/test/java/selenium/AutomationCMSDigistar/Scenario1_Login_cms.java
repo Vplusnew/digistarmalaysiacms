@@ -31,7 +31,7 @@ import org.openqa.selenium.support.ui.Wait;
 
 
 @SuppressWarnings("unused")
-public class a_Login_cms{
+public class Scenario1_Login_cms{
 
 	@Test
 public void TC1_Login_valid() throws InterruptedException { //TC1 Login No telephone Valid

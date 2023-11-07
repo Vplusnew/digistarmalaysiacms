@@ -20,7 +20,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.WheelInput;
 
 @SuppressWarnings("unused")
-public class b_Content_Menu{
+public class Scenario2_Content_Menu{
 	
 
 @Test

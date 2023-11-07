@@ -14,5 +14,5 @@ import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Wait;
 @SuppressWarnings("unused")
-public class c_Configuration_Menu{
+public class Scenario3_Configuration_Menu{
 }
