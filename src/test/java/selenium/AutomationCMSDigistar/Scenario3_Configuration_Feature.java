@@ -2,6 +2,7 @@ package selenium.AutomationCMSDigistar;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import java.security.PublicKey;
 import java.time.Duration;
@@ -50,7 +51,7 @@ public void TC12() throws InterruptedException { //TC1 Login No telephone Valid
 			driver.findElement(By.xpath("(//button[normalize-space()='Log in'])[1]")).click();
 			
 			driver.findElement(By.xpath("(//input[@name='navchild-container'])[2]")).click();	
-			Thread.sleep(1000);
+			Thread.sleep(1000); 
 			driver.findElement(By.xpath("(//div[@class='collapse-content'])[3]")).click();
 			Thread.sleep(500);
 			driver.findElement(By.xpath("(//button[@class='btn btn-warning btn-xs'])[1]")).click();

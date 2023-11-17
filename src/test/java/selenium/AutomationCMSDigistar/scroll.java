@@ -1,6 +1,7 @@
 package selenium.AutomationCMSDigistar;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import java.security.PublicKey;
 import java.time.Duration;

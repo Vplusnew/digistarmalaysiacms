@@ -1,4 +1,5 @@
 package selenium.AutomationCMSDigistar;
+import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertTrue;
 import static org.testng.AssertJUnit.assertTrue;
 import org.testng.annotations.Test;
@@ -691,4 +692,110 @@ new Actions(driver)
 		driver.quit(); 
 
 }
+  @Test
+  public void TC26_MenambahKontenDenganHuruf () throws InterruptedException {
+	  
+	  WebDriver driver ;
+	  WebDriverManager.chromedriver().setup();
+	  driver = new ChromeDriver();
+	  driver.manage().window().maximize();
+	  driver.get("https://cms-stag-digistar.visionplus.id/login");
+	  
+	  Thread.sleep(1000);
+		driver.findElement(By.xpath("(//input[@id='email'])[1] ")).sendKeys("test@mail.com");
+		Thread.sleep(500);
+		driver.findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys("4321lupa");
+		Thread.sleep(500);
+		
+		driver.findElement(By.xpath("(//button[normalize-space()='Log in'])[1]")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("(//input[@value='series'])[1]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("(//button[normalize-space()='Cluster'])[1]")).click();
+		Thread.sleep(500);  		
+		driver.findElement(By.xpath("(//input[@placeholder='Title (ID)'])[1]")).sendKeys("Otomasi Series TC26");
+		Thread.sleep(500);
+		driver.findElement(By.xpath("(//input[@placeholder='Title (EN)'])[1]")).sendKeys("Automation Series TC26");
+		driver.findElement(By.xpath("(//input[@placeholder='Sorting'])[1]")).sendKeys("10e");
+		Thread.sleep(500);
+		driver.findElement(By.xpath("(//input[@value='1'])[1]")).click();
+		Thread.sleep(500);
+		driver.findElement(By.xpath("(//input[@placeholder='Content ID'])[1]")).sendKeys("407e");
+		Thread.sleep(10000);
+		driver.close();
+		driver.quit(); 
+	  
+  }
+  
+  @Test
+  
+  public void TC27_MenambahKontenTidakklikAddKonten () throws InterruptedException {
+	  
+	  WebDriver driver;
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.get("https://cms-stag-digistar.visionplus.id/login");
+	//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("(//input[@id='email'])[1] ")).sendKeys("test@mail.com");
+		Thread.sleep(500);
+		driver.findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys("4321lupa");
+		Thread.sleep(500);
+		
+		driver.findElement(By.xpath("(//button[normalize-space()='Log in'])[1]")).click();
+
+		driver.findElement(By.xpath("(//input[@value='series'])[1]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("(//button[normalize-space()='Cluster'])[1]")).click();
+		//driver.findElement(By.xpath("//body[1]/div[3]/div[1]/div[1]/main[1]/div[1]/div[3]/div[4]/div[1]/div[1]/div[1]/button[1]")).click();
+		Thread.sleep(500);
+		
+		driver.findElement(By.xpath("(//input[@placeholder='Title (ID)'])[1]")).sendKeys("Otomasi Series TC27");
+		Thread.sleep(500);
+		driver.findElement(By.xpath("(//input[@placeholder='Title (EN)'])[1]")).sendKeys("Automation Series TC27");
+		driver.findElement(By.xpath("(//input[@placeholder='Sorting'])[1]")).sendKeys("10");
+		Thread.sleep(500);
+		driver.findElement(By.xpath("(//input[@placeholder='Content ID'])[1]")).sendKeys("43976");
+
+		Thread.sleep(500);
+		driver.findElement(By.xpath("(//button[normalize-space()='save'])[1]")).click();
+Thread.sleep(500);
+		WebElement cluster=driver.findElement(By.xpath("(//h1[normalize-space()='Automation Series TC27'])[1]"));
+	    WheelInput.ScrollOrigin scrollOrigin = WheelInput.ScrollOrigin.fromElement(cluster);
+new Actions(driver)
+        .scrollFromOrigin(scrollOrigin, 0, 300)
+        .perform();
+			Thread.sleep(10000);
+		driver.close();
+		driver.quit(); 
+	  
+  }
+  @Test
+   public void TC28_SearchConfiguration ()throws InterruptedException {
+	   WebDriver driver;
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.get("https://cms-stag-digistar.visionplus.id/login");
+	//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("(//input[@id='email'])[1] ")).sendKeys("test@mail.com");
+		Thread.sleep(500);
+		driver.findElement(By.xpath("(//input[@id='password'])[1]")).sendKeys("4321lupa");
+		Thread.sleep(500);
+		
+		driver.findElement(By.xpath("(//button[normalize-space()='Log in'])[1]")).click();
+		Thread.sleep(500);
+//		driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/a[2]")).click();
+			Thread.sleep(10000);
+		driver.close();
+		driver.quit(); 
+   }
+  
+  
+  
+  
 }

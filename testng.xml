@@ -3,8 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="selenium.AutomationDigistar.a_Login_No_Telepon"/>
-      <class name="selenium.AutomationDigistar.b_Login_Email"/>
+      <class name="selenium.AutomationCMSDigistar.Scenario2_Content_Menu"/>
+      <class name="selenium.AutomationCMSDigistar.Scenario3_Configuration_Feature"/>
+      <class name="selenium.AutomationCMSDigistar.Scenario1_Login_cms"/>
+      <class name="selenium.AutomationCMSDigistar.scroll"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
